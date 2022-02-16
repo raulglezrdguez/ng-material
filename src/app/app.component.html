@@ -25,15 +25,25 @@
         >
           <mat-icon>menu</mat-icon>
         </button>
-
-        Super
+        <span>Super</span>
       </div>
       <div>
-        <span>Home</span>
-        <span>About</span>
+        <button mat-button [matMenuTriggerFor]="menuFront">Frontend</button>
+        <button mat-button [matMenuTriggerFor]="menuBack">Backend</button>
         <span>Services</span>
       </div>
     </mat-toolbar>
+
+    <mat-menu #menuFront="matMenu" xPosition="before" yPosition="below">
+      <button mat-menu-item>Angular</button>
+      <button mat-menu-item>React</button>
+      <button mat-menu-item>Vue</button>
+    </mat-menu>
+
+    <mat-menu #menuBack="matMenu" xPosition="after" yPosition="below">
+      <button mat-menu-item>Nestjs</button>
+      <button mat-menu-item>Nodejs</button>
+    </mat-menu>
 
     <h3>Open/close/switch navbar</h3>
     <button mat-icon-button color="warn" (click)="sidenav.close()">
