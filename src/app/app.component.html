@@ -45,6 +45,24 @@
 <h1>Icons</h1>
 <mat-icon color="accent">grade</mat-icon>
 
+<h1>Badges</h1>
+<div>
+  <span
+    [matBadge]="notifications"
+    [matBadgeHidden]="notifications === 0"
+    matBadgeSize="large"
+    matBadgeColor="accent"
+    matBadgeOverlap="false"
+    >Notifications</span
+  >
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="below before">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="above after">Notifications</span>
+</div>
+
 <h1>Typography</h1>
 
 <div class="mat-display-4">Display-4</div>
