@@ -6,6 +6,22 @@ span {
   padding-right: 1rem;
 }
 
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav,
+mat-sidenav-content {
+  padding: 1rem;
+}
+
+mat-sidenav {
+  background-color: aquamarine;
+  width: 30%;
+  min-width: 200px;
+  max-width: 250px;
+}
+
 button {
   margin-right: 2rem;
 }
