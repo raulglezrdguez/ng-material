@@ -1,11 +1,48 @@
 <h1>Buttons</h1>
+<div>
+  <button mat-raised-button color="accent" disableRipple>Button</button>
+  <button mat-flat-button color="primary">Flat button</button>
+  <button mat-stroked-button color="primary">Stroked button</button>
+  <button mat-icon-button color="warn"><mat-icon>phone</mat-icon></button>
+  <button mat-fab color="accent"><mat-icon>phone</mat-icon></button>
+  <button mat-mini-fab color="accent"><mat-icon>phone</mat-icon></button>
+</div>
 
-<button mat-raised-button color="accent" disableRipple>Button</button>
-<button mat-flat-button color="primary">Flat button</button>
-<button mat-stroked-button color="primary">Stroked button</button>
-<button mat-icon-button color="warn"><mat-icon>phone</mat-icon></button>
-<button mat-fab color="accent">Fab button</button>
-<button mat-mini-fab color="accent">Mini Fab button</button>
+<div>
+  <mat-button-toggle color="primary" #toggleBtn checked
+    >Toggle</mat-button-toggle
+  >
+  {{ toggleBtn.checked }}
+</div>
+<div>
+  <mat-button-toggle-group
+    name="fontStyle"
+    #fontStyleGroup="matButtonToggleGroup"
+    aria-label="Font Style"
+    multiple
+  >
+    <mat-button-toggle value="bold" checked="">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ fontStyleGroup.value }}
+</div>
+
+<div>
+  <mat-button-toggle-group
+    name="fontStyle"
+    #frontGroup="matButtonToggleGroup"
+    aria-label="Font Style"
+    multiple
+  >
+    <mat-button-toggle value="bold" checked="">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ frontGroup.value }}
+</div>
+
+<h1>Typography</h1>
 
 <div class="mat-display-4">Display-4</div>
 <div class="mat-display-3">Display-3</div>
