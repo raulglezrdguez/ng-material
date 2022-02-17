@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 type Option = {
   name: string;
@@ -9,6 +10,8 @@ type Option = {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  constructor(private snackbar: MatSnackBar) {}
+
   title = 'ng-material';
   notifications = 28;
   sidenavOpened = true;
@@ -47,5 +50,17 @@ export class AppComponent {
   dateFilter(date: Date | null) {
     const d = date?.getDay();
     return d !== 0 && d !== 6;
+  }
+
+  openSnackbar(message: string, action: string) {
+    const snackbarRef = this.snackbar.open(message, action, { duration: 2000 });
+
+    snackbarRef.afterDismissed().subscribe(() => {
+      console.log('snackbar dismissed');
+    });
+
+    snackbarRef.onAction().subscribe(() => {
+      console.log('snackbar on action');
+    });
   }
 }
