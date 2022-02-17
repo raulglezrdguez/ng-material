@@ -22,6 +22,8 @@ export class AppComponent {
   ];
   checkboxChecked: boolean = false;
   radioValue: string = '2';
+  minDate = new Date();
+  maxDate = new Date(2022, 1, 21);
 
   showSpinner = false;
   loadData() {
@@ -40,5 +42,10 @@ export class AppComponent {
   radioChange(value: string) {
     this.radioValue = value;
     console.log(value);
+  }
+
+  dateFilter(date: Date | null) {
+    const d = date?.getDay();
+    return d !== 0 && d !== 6;
   }
 }
