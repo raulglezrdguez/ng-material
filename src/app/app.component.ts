@@ -21,6 +21,7 @@ export class AppComponent {
     { name: 'vue' },
   ];
   checkboxChecked: boolean = false;
+  radioValue: string = '2';
 
   showSpinner = false;
   loadData() {
@@ -34,5 +35,10 @@ export class AppComponent {
 
   displaySelect(option: any) {
     return option ? option.name : undefined;
+  }
+
+  radioChange(value: string) {
+    this.radioValue = value;
+    console.log(value);
   }
 }
