@@ -42,3 +42,16 @@ table {
 th.mat-sort-header-sorted {
   color: black;
 }
+
+.largeArray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  box-sizing: border-box;
+  height: 100px;
+}
+
+.containerLargeArray {
+  height: 400px;
+}

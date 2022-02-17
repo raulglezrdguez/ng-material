@@ -36,13 +36,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements AfterViewInit {
+  largeArray: number[];
   constructor(
     private snackbar: MatSnackBar,
     private matDialog: MatDialog,
     private _liveAnnouncer: LiveAnnouncer
-  ) {}
-  @ViewChild(MatSort)
-  sort!: MatSort;
+  ) {
+    this.largeArray = Array.from(Array(1000).keys());
+  }
+
+  @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];

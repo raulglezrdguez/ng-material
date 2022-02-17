@@ -61,6 +61,11 @@
       <mat-icon>star_half</mat-icon>
     </button>
 
+    <h1>Virtual scrolling</h1>
+    <cdk-virtual-scroll-viewport itemSize="100" class="containerLargeArray">
+      <div *cdkVirtualFor="let n of largeArray" class="largeArray">{{ n }}</div>
+    </cdk-virtual-scroll-viewport>
+
     <h1>Data Table</h1>
 
     <mat-form-field>
