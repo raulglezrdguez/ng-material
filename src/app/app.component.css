@@ -22,6 +22,10 @@ mat-sidenav {
   max-width: 250px;
 }
 
+mat-grid-tile {
+  background-color: lightblue;
+}
+
 button {
   margin-right: 2rem;
 }
