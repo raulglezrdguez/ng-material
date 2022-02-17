@@ -61,7 +61,27 @@
       <mat-icon>star_half</mat-icon>
     </button>
 
+    <h1>Select</h1>
+
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select [(value)]="selectValue" multiple>
+        <mat-option>None</mat-option>
+        <mat-optgroup label="Front">
+          <mat-option value="angular">Angular</mat-option>
+          <mat-option value="react">React</mat-option>
+          <mat-option value="vue">Vue</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="Back">
+          <mat-option value="nodejs">nodejs</mat-option>
+          <mat-option value="nestjs">nestjs</mat-option>
+        </mat-optgroup>
+      </mat-select>
+    </mat-form-field>
+    {{ selectValue }}
+
     <h1>Inputs</h1>
+
     <mat-form-field floatLabel="auto" appearance="outline" color="accent">
       <mat-label>Label</mat-label>
       <input matInput required />

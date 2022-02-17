@@ -10,6 +10,7 @@ export class AppComponent {
   notifications = 28;
   sidenavOpened = true;
   tabSelectedIndex = 0;
+  selectValue = ['angular'];
 
   showSpinner = false;
   loadData() {
