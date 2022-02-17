@@ -61,6 +61,14 @@
       <mat-icon>star_half</mat-icon>
     </button>
 
+    <h1>Checkbox</h1>
+    <mat-checkbox
+      [checked]="checkboxChecked"
+      (change)="checkboxChecked = $event.checked"
+      >Checkbox</mat-checkbox
+    >{{ checkboxChecked }} <br />
+    <mat-checkbox labelPosition="before" color="primary">Checkbox</mat-checkbox>
+
     <h1>Autocomplete</h1>
 
     <form action="#">

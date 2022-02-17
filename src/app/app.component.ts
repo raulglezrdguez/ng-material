@@ -20,6 +20,7 @@ export class AppComponent {
     { name: 'react' },
     { name: 'vue' },
   ];
+  checkboxChecked: boolean = false;
 
   showSpinner = false;
   loadData() {
