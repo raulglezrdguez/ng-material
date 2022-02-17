@@ -61,6 +61,30 @@
       <mat-icon>star_half</mat-icon>
     </button>
 
+    <h1>Stepper</h1>
+
+    <mat-horizontal-stepper linear>
+      <mat-step label="Step 1" completed="true">
+        <p>Details</p>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Step 2" completed="false" optional>
+        <p>Details</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Step 3" completed="false">
+        <p>Details</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+
     <h1>Tabs</h1>
 
     <mat-tab-group [(selectedIndex)]="tabSelectedIndex">
