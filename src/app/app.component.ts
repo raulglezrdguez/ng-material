@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DialogComponent } from './dialog/dialog.component';
 
 type Option = {
   name: string;
@@ -10,7 +12,7 @@ type Option = {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private snackbar: MatSnackBar) {}
+  constructor(private snackbar: MatSnackBar, private matDialog: MatDialog) {}
 
   title = 'ng-material';
   notifications = 28;
@@ -61,6 +63,17 @@ export class AppComponent {
 
     snackbarRef.onAction().subscribe(() => {
       console.log('snackbar on action');
+    });
+  }
+
+  openDialog() {
+    const dialogRef = this.matDialog.open(DialogComponent, {
+      data: { name: 'Testing' },
+      width: '50rem',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`dialog closed: ${result}`);
     });
   }
 }

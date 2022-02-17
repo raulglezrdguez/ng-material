@@ -61,12 +61,17 @@
       <mat-icon>star_half</mat-icon>
     </button>
 
+    <h1>Dialog</h1>
+    <button mat-raised-button (click)="openDialog()">Open dialog</button>
+
     <h1>Snackbar</h1>
+
     <button mat-raised-button (click)="openSnackbar('Snackbar message', 'Ok')">
       Show Snackbar
     </button>
 
     <h1>Tooltip</h1>
+
     <button
       mat-raised-button
       matTooltip="Click the button"
