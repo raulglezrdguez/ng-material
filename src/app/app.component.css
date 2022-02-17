@@ -30,6 +30,7 @@ button {
   margin-right: 2rem;
 }
 
-div {
+div,
+h1 {
   margin: 2rem;
 }

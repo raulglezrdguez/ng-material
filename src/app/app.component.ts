@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'ng-material';
   notifications = 28;
   sidenavOpened = true;
+  tabSelectedIndex = 0;
 
   showSpinner = false;
   loadData() {
@@ -16,7 +17,7 @@ export class AppComponent {
     setTimeout(() => (this.showSpinner = false), 5000);
   }
 
-  log(status: string) {
+  log(status: string | number | null) {
     console.log(status);
   }
 }
