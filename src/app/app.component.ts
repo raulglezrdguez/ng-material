@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+type Option = {
+  name: string;
+};
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +14,12 @@ export class AppComponent {
   sidenavOpened = true;
   tabSelectedIndex = 0;
   selectValue = ['angular'];
+  optionsAutocomplete = ['angular', 'react', 'vue'];
+  optionsObjectAutocomplete: Option[] = [
+    { name: 'angular' },
+    { name: 'react' },
+    { name: 'vue' },
+  ];
 
   showSpinner = false;
   loadData() {
@@ -20,5 +29,9 @@ export class AppComponent {
 
   log(status: string | number | null) {
     console.log(status);
+  }
+
+  displaySelect(option: any) {
+    return option ? option.name : undefined;
   }
 }

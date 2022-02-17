@@ -61,6 +61,34 @@
       <mat-icon>star_half</mat-icon>
     </button>
 
+    <h1>Autocomplete</h1>
+
+    <form action="#">
+      <mat-form-field>
+        <input type="text" matInput [matAutocomplete]="auto" />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option
+            *ngFor="let option of optionsAutocomplete"
+            [value]="option"
+          >
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <hr />
+      <mat-form-field>
+        <input type="text" matInput [matAutocomplete]="auto" />
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displaySelect">
+          <mat-option
+            *ngFor="let option of optionsObjectAutocomplete"
+            [value]="option.name"
+          >
+            {{ option.name }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
     <h1>Select</h1>
 
     <mat-form-field>
